@@ -1,0 +1,38 @@
+  
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+<link th:src="@{/style/app.css}" rel="stylesheet"/>
+<title>Add a Book</title>
+</head>
+<body>
+	<form:form modelAttribute="book" action="books" method="post">
+		<p>
+			<form:errors path="*" cssStyle="color : red;" />
+		</p>
+		<table>
+			<tr>
+				<td>Title:</td>
+				<td><form:input path="title" /></td>
+				<td><form:errors path="title" cssClass="color : red;" /></td>
+			</tr>
+			<tr>
+				<td>ISBN:</td>
+				<td><form:input path="ISBN" /></td>
+				<td><form:errors path="ISBN" cssClass="color : red;" /></td>
+			</tr>
+			<tr>
+				<td>Author:</td>
+				<td><form:input path="author" /></td>
+				<td><form:errors path="author" cssClass="color : red;" /></td>
+			</tr>
+			<tr>
+				<td>Price:</td>
+				<td><form:input path="price" /></td>
+			</tr>
+		</table>
+		<input type="submit" />
+
+	</form:form>
+</body>
+</html>
